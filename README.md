@@ -83,7 +83,7 @@ you even can forbid the widget to change its state(open or close) like this
 ## What does it look like 
 
 
-<img src="https://github.com/Leaking/SlideSwitch/blob/master/Example/TestLibs/res/drawable-hdpi/slide_a.png" width="340" />
+<img src="https://github.com/mvpleung/SlideSwitch/blob/master/Example/TestLibs/res/drawable-hdpi/slide_a.png" width="340" />
 <img src="https://github.com/Leaking/SlideSwitch/blob/master/Example/TestLibs/res/drawable-hdpi/slide_c.gif" width="340" />
 
 

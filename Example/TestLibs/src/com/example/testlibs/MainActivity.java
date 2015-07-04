@@ -15,14 +15,13 @@
  */
 package com.example.testlibs;
 
-import com.leaking.slideswitch.SlideSwitch;
-import com.leaking.slideswitch.SlideSwitch.SlideListener;
-
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+
+import com.leaking.slideswitch.SlideSwitch;
+import com.leaking.slideswitch.SlideSwitch.SlideListener;
 
 public class MainActivity extends Activity implements SlideListener {
 
@@ -43,16 +42,9 @@ public class MainActivity extends Activity implements SlideListener {
 	}
 
 	@Override
-	public void open() {
+	public void onSlide(View view, boolean isOpen) {
 		// TODO Auto-generated method stub
-		txt.setText("first switch is opend, and set the second one is 'slideable'");
-		slide2.setSlideable(true);
-	}
-
-	@Override
-	public void close() {
-		// TODO Auto-generated method stub
-		txt.setText("first switch is closed,and set the second one is 'unslideable'");
-		slide2.setSlideable(false);
+		txt.setText(isOpen?"first switch is opend, and set the second one is 'slideable'":"first switch is closed,and set the second one is 'unslideable'");
+		slide2.setSlideable(isOpen);
 	}
 }

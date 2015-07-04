@@ -2,7 +2,14 @@
 <resources>
 
     <declare-styleable name="slideswitch">
-        <attr name="themeColor" format="color" />
+        <attr name="onThemeImage" format="reference" />
+        <attr name="offThemeImage" format="reference" />
+        <attr name="onCircleImage" format="reference" />
+        <attr name="offCircleImage" format="reference" />
+        <attr name="onThemeColor" format="color" />
+        <attr name="offThemeColor" format="color" />
+        <attr name="onCircleColor" format="color" />
+        <attr name="offCircleColor" format="color" />
         <attr name="isOpen" format="boolean" />
         <attr name="shape">
             <enum name="rect" value="1" />

@@ -14,8 +14,7 @@
         android:layout_width="150dip"
         android:layout_height="60dip"
         slideswitch:isOpen="true"
-        slideswitch:shape="rect"
-        slideswitch:themeColor="#ffee3a00" >
+        slideswitch:shape="rect" >
     </com.leaking.slideswitch.SlideSwitch>
 
     <TextView
@@ -29,8 +28,7 @@
         android:layout_height="100dip"
         android:layout_marginTop="10dip"
         slideswitch:isOpen="true"
-        slideswitch:shape="circle"
-        slideswitch:themeColor="#ff0a5a00" >
+        slideswitch:shape="circle" >
     </com.leaking.slideswitch.SlideSwitch>
 
     <com.leaking.slideswitch.SlideSwitch
@@ -39,8 +37,7 @@
         android:layout_height="50dip"
         android:layout_marginTop="10dip"
         slideswitch:isOpen="true"
-        slideswitch:shape="circle"
-        slideswitch:themeColor="#ff73aa00" >
+        slideswitch:shape="circle" >
     </com.leaking.slideswitch.SlideSwitch>
 
     <com.leaking.slideswitch.SlideSwitch
@@ -49,8 +46,7 @@
         android:layout_height="120dip"
         android:layout_marginTop="10dip"
         slideswitch:isOpen="false"
-        slideswitch:shape="circle"
-        slideswitch:themeColor="#f200aa96" >
+        slideswitch:shape="circle" >
     </com.leaking.slideswitch.SlideSwitch>
 
     <com.leaking.slideswitch.SlideSwitch
@@ -59,8 +55,30 @@
         android:layout_height="50dip"
         android:layout_marginTop="10dip"
         slideswitch:isOpen="true"
-        slideswitch:shape="rect"
-        slideswitch:themeColor="#f23331a0" >
+        slideswitch:shape="rect" >
+    </com.leaking.slideswitch.SlideSwitch>
+
+    <com.leaking.slideswitch.SlideSwitch
+        android:id="@+id/swit6"
+        android:layout_width="99dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dip"
+        slideswitch:isOpen="false"
+        slideswitch:offThemeColor="#000000"
+        slideswitch:onCircleColor="@color/red"
+        slideswitch:shape="circle" >
+    </com.leaking.slideswitch.SlideSwitch>
+
+    <com.leaking.slideswitch.SlideSwitch
+        android:id="@+id/swit7"
+        android:layout_width="99dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dip"
+        slideswitch:isOpen="false"
+        slideswitch:onThemeImage="@drawable/slide_on_bg"
+        slideswitch:offThemeImage="@drawable/slide_off_bg"
+        slideswitch:onCircleColor="@color/red"
+        slideswitch:shape="circle" >
     </com.leaking.slideswitch.SlideSwitch>
 
 </LinearLayout>
