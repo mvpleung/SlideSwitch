@@ -209,6 +209,7 @@ public class SlideSwitch extends View {
 		isOpen = frontRect_left > max_left / 2;
 		int radius = backRect.height() / 2 - RIM_SIZE;
 		if (shape == SHAPE_RECT) {
+			paint.setAlpha(255 - alpha);
 			if (bitmap_off_theme != null) {
 				canvas.drawBitmap(bitmap_off_theme, backRect.left,
 						backRect.top, paint);
@@ -240,6 +241,7 @@ public class SlideSwitch extends View {
 		} else {
 			// draw circle
 			backCircleRect.set(backRect);
+			paint.setAlpha(255 - alpha);
 			if (bitmap_off_theme != null) {
 				canvas.drawBitmap(bitmap_off_theme, backCircleRect.left,
 						backCircleRect.top, paint);
@@ -366,9 +368,11 @@ public class SlideSwitch extends View {
 					}
 					alpha = 255;
 					frontRect_left = max_left;
-					isOpen = true;
-					if (listener != null)
-						handler.sendEmptyMessage(1);
+					if (!isOpen) {
+						isOpen = true;
+						if (listener != null)
+							handler.sendEmptyMessage(1);
+					}
 					frontRect_left_begin = max_left;
 
 				} else {
@@ -384,9 +388,11 @@ public class SlideSwitch extends View {
 					}
 					alpha = 0;
 					frontRect_left = min_left;
-					isOpen = false;
-					if (listener != null)
-						handler.sendEmptyMessage(0);
+					if (isOpen) {
+						isOpen = false;
+						if (listener != null)
+							handler.sendEmptyMessage(0);
+					}
 					frontRect_left_begin = min_left;
 
 				}
